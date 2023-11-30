@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="/fragments/head :: head"></head>
+<body>
+
+<div th:replace="/fragments/header :: header"></div>
+
+<div class="container">
+    <div class="post">
+        <h4 th:text=" 'Người tạo bài: ' + ${post.author.firstName}"></h4>
+        <h2><a th:href="@{'/post/' + ${post.id}}" th:text="${post.title}">Title</a></h2>
+        <p th:text="${post.sumary}">body text</p>
+        <h5 th:text="'' + ${#dates.format(post.createAt, 'yyyy MMMM dd')} "></h5>
+        <div class="align-right" th:if="${isOwner}">
+            <a th:href="@{'/editPost/{id}'(id=${post.id})}">
+                <button class="green-btn blue-btn" type="button">Edit</button>
+            </a>
+        </div>
+        <div class="align-center">
+            <a th:href="@{'/comment/{id}'(id=${post.id})}">
+                <button class="green-btn" type="button">Comment Post</button>
+            </a>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+</body>
+</html>

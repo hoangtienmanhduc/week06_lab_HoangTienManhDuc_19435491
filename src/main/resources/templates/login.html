@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="/fragments/head :: head"></head>
+
+<body>
+
+<div th:replace="/fragments/header :: header"></div>
+
+<div class="container">
+    <form th:action="@{/login}" method="post">
+        <h2>LOGIN </h2>
+        <div>
+            <input style="width:500px" type="text" name="username" id="username" placeholder="Email" required="true" autofocus="true"/>
+        </div>
+        <div>
+            <input style="width:500px" type="password" name="password" id="password" placeholder="Password" required="true"/>
+        </div>
+        <div>
+            <button type="submit" class="green-btn" >Login</button>
+        </div>
+
+    </form>
+
+</div>
+
+
+
+</body>
+</html>

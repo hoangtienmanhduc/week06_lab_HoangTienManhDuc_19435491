@@ -1,0 +1,209 @@
+/* NAV Style */
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #f2f2f2;
+    overflow: hidden;
+    height:50px;
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #f2f2f2;
+    color: red;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color:#f2f2f2 ;
+    color: black;
+    float: left;
+}
+
+.topnav a.right {
+    float: right;
+}
+
+body {
+    font-family: Arial;
+    padding: 0;
+    background:#F8F8FF;
+    width: 80%;
+    margin: auto;
+
+}
+
+/* Header/Blog Title */
+.header {
+    padding: 10px;
+    font-size: 25px;
+    text-align: center;
+    background: white;
+}
+
+.container {
+    /*width: 80%;*/
+    margin: auto;
+    text-align: center;
+}
+
+.posts_wrapper {
+    /*width: 100%;*/
+}
+
+/* Fake image */
+
+
+.post {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.post h2 {
+    text-transform: capitalize;
+}
+
+.post p {
+    text-align: justify
+}
+
+/* Clear floats after the posts */
+.post:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.comments h2 {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.comment {
+    position: relative;
+    background-color: white;
+    padding: 10px 20px;
+    text-align: justify;
+    width: 80%;
+    margin: 5px auto;
+}
+
+form {
+    margin: auto;
+    width: 80%;
+}
+
+
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #DDDDDD;
+    margin-top: 20px;
+}
+
+.alert-red {
+    padding: 20px;
+    background-color: #DD0000; /* Red */
+    color: white;
+    margin: 15px auto;
+    width: 80%;
+}
+.alert-green {
+    padding: 20px;
+    background-color: #FFFF33;
+    color: white;
+    margin: 15px auto;
+    width: 80%;
+}
+
+a {
+    color: #99FFCC;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #66FF66;
+    text-decoration: underline;
+}
+
+.green-btn {
+    background-color: #00BFFF; /* Green */
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius:8px;
+    margin-top:15px;
+}
+
+.green-btn:hover {
+    background-color: #66FFFF;
+    color: white;
+}
+
+.red-btn {
+    background-color: #BB0000;
+}
+.red-btn :hover{
+    background-color: #880000;
+}
+.blue-btn {
+    background-color:#33FFFF;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid ;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.text-danger{
+    color: red;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<header th:fragment="header">
+    <div class="topnav">
+        <a class="active" th:href="@{/}">HOME</a>
+        <a class="left" th:if="${session.isLogin} == true" th:href="@{/createNewPost}">NEW POST</a>
+        </span>
+        <span th:if="${session.isLogin} == true">
+        <a class="right" th:href="@{/logout}">LOGOUT</a>
+        </span>
+        <span th:if="${session.isLogin} == true">
+            <a class="right">Welcome <span th:text="${session.user.getFirstName()}">to name?</span></a>
+        </span>
+        <span th:if="${session.isLogin == null or session.isLogin == false}">
+            <a class="right" th:href="@{/login}">LOGIN</a>
+            <a class="right" th:href="@{/signup}">SIGN UP</a>
+        </span>
+    </div>
+
+</header>
+
+</body>
+</html>
